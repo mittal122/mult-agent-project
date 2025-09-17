@@ -1,0 +1,46 @@
+I want to build an AI system on Replit that uses the multi-agent approach to generate a full website or application based on a user’s natural language prompt. 
+The user must provide their own Gemini API key, and the system must use only that key for all model calls. 
+
+The system should have multiple specialized agents, each with a clear responsibility, working together like a development team. 
+
+### Agents and Responsibilities:
+1. Requirement Agent:
+   - Parse the user prompt into a structured project plan.
+   - Identify pages, features, backend needs, and styling preferences.
+
+2. Frontend Agent:
+   - Generate the full frontend code using React with Tailwind CSS.
+   - Ensure modular components, clean UI, and responsive design.
+
+3. Backend Agent (only if required by user prompt):
+   - Generate backend code using Node.js with Express.
+   - Setup APIs, routes, and database integration (SQLite or MongoDB).
+   - Handle authentication if requested.
+
+4. Validator Agent:
+   - Check if the generated code runs without errors.
+   - Fix bugs, missing imports, or dependency issues automatically.
+
+5. Deployment Agent:
+   - Package the project into a structured codebase.
+   - Ensure the project is production-ready and can be deployed to Replit, Vercel, or Netlify.
+   - Provide option to download code as ZIP.
+
+### Functionality:
+- Input: 
+  - Gemini API key from the user (must be mandatory, no default key allowed).
+  - Natural language prompt describing the desired website or app.
+- Process: 
+  - Agents collaborate to convert the prompt → structured requirements → working frontend/backend code.
+- Output:
+  - A full project folder with clearly separated files.
+  - Clean, deployable, and production-ready code.
+
+### Rules:
+- Never use or hardcode a default API key; only use the one provided by the user.
+- Ensure generated code is clean, modular, and follows best practices.
+- Each agent should only focus on its responsibility and then pass results to the next agent.
+- Final output must be a complete project that the user can preview and deploy directly.
+
+End Goal:
+An AI multi-agent system on Replit where the user provides their Gemini API key and a prompt, and the system builds a complete frontend + backend (if required) website automatically with validation and deployment-ready structure.
